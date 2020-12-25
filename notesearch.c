@@ -9,7 +9,6 @@
 int print_notes(int, int, char *);   // note printing function
 int find_user_note(int, int);        // seek in file for a note for user
 int search_note(char *, char *);     // search for keyword function
-void fatal(char *);                  // fatal error handler
 
 int main(int argc, char *argv[]) {
 	int userid, printing=1, fd; // file descriptor
