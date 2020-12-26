@@ -18,10 +18,10 @@ build:
 	gcc -o commandline commandline.c
 	gcc -o convert2 convert2.c
 	gcc -o convert convert.c
-	gcc -o crypt_crack crypt_crack.c
-	gcc -o crypt_test crypt_test.c
+	gcc -o crypt_crack crypt_crack.c -lcrypt
+	gcc -o crypt_test crypt_test.c -lcrypt
 	gcc -o datatype_sizes datatype_sizes.c
-	gcc -o decode_sniff decode_sniff.c
+	gcc -o decode_sniff decode_sniff.c -lpcap
 	gcc -o dissembler dissembler.c
 	gcc -o drop_privs drop_privs.c
 	gcc -o dtors_sample dtors_sample.c
@@ -50,30 +50,30 @@ build:
 	gcc -o notesearch notesearch.c
 	gcc -o notetaker notetaker.c
 	gcc -o overflow_example overflow_example.c
-	gcc -o pcap_sniff pcap_sniff.c
+	gcc -o pcap_sniff pcap_sniff.c -lpcap
 	gcc -o pointer pointer.c
 	gcc -o pointer_types2 pointer_types2.c
 	gcc -o pointer_types3 pointer_types3.c
 	gcc -o pointer_types4 pointer_types4.c
 	gcc -o pointer_types5 pointer_types5.c
 	gcc -o pointer_types pointer_types.c
-	gcc -o ppm_crack ppm_crack.c
-	gcc -o ppm_gen ppm_gen.c
+	gcc -o ppm_crack ppm_crack.c -lcrypt
+	gcc -o ppm_gen ppm_gen.c -lcrypt
 	gcc -o printable_helper printable_helper.c
 	gcc -o rand_example rand_example.c
 	gcc -o raw_tcpsniff raw_tcpsniff.c
-	gcc -o rst_hijack rst_hijack.c
+	gcc -o rst_hijack rst_hijack.c -lnet -lpcap
 	gcc -o scope2 scope2.c
 	gcc -o scope3 scope3.c
 	gcc -o scope scope.c
-	gcc -o shroud shroud.c
+	gcc -o shroud shroud.c -lnet -lpcap
 	gcc -o signal_example signal_example.c
 	gcc -o simplenote simplenote.c
 	gcc -o simple_server simple_server.c
 	gcc -o stack_example stack_example.c
 	gcc -o static2 static2.c
 	gcc -o static static.c
-	gcc -o synflood synflood.c
+	gcc -o synflood synflood.c -lnet
 	gcc -o time_example2 time_example2.c
 	gcc -o time_example time_example.c
 	gcc -o tinyweb tinyweb.c
