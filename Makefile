@@ -1,3 +1,7 @@
+# You need a special version of libnet.
+# The one in the repos is wauy too fresh
+# https://code.google.com/archive/p/ips-builder/downloads - here's 1.0.2
+# 
 # echo -e "build:" >> Makefile
 # ls | grep c$ | awk -F'.' '{print $1}' | while read line; do echo -e "\tgcc -o $line $line.c" >> Makefile; done
 # echo -e "clean:" >> Makefile
